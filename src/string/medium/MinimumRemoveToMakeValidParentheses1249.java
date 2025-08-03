@@ -25,7 +25,7 @@ public class MinimumRemoveToMakeValidParentheses1249 {
             char cur = s.charAt(i);
 
             if(cur=='(') leftCount++;
-            else rightCount++;
+            if(cur==')') rightCount++;
 
             if(rightCount>leftCount){//skip current parentheses
                 rightCount--;
